@@ -1,0 +1,11 @@
+CNN_test_decisions = {
+	allowed = {
+		original_tag = CNN
+	}
+	icon = saf_anti_colonialist_crusade
+	priority = 8
+	visible = {
+		always = yes
+	}
+	visible_when_empty = yes
+}

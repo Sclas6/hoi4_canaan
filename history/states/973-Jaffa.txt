@@ -1,0 +1,35 @@
+
+state={
+	id=973
+	name="STATE_973" #Palestine
+	manpower = 776365
+
+	state_category = large_city
+
+	history={
+		owner = CNN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+			fuel_silo = 3
+			air_base = 4
+			1201 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			1201 3 # Haifa
+		}
+		victory_points = {
+			4206 10 # Jaffa
+		}
+		add_core_of = CNN
+	}
+
+	provinces={
+		1201 4206
+	}
+
+	local_supplies=0.0
+}

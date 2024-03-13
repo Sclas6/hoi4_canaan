@@ -1,0 +1,153 @@
+focus_tree = {
+	id = cnn-national-focus
+	continuous_focus_position = { x = -40 y = 1050 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CNN
+		}
+	}
+	#CNN_ISR_5
+	focus = {
+		id = CNN_cnn_isr_5
+		icon = GFX_goal_generic_army_doctrines
+		x = 2
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CNN_cnn_isr_2  } prerequisite = { focus = CNN_cnn_isr_3  }
+	}
+
+	#CNN_ISR_6
+	focus = {
+		id = CNN_cnn_isr_6
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 1
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CNN_cnn_isr_4  } prerequisite = { focus = CNN_cnn_isr_5  }
+	}
+
+	#CNN_ISR_4
+	focus = {
+		id = CNN_cnn_isr_4
+		icon = GFX_focus_eng_global_defense
+		x = 0
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CNN_cnn_isr_3  }
+	}
+
+	#CNN_politics_effort_1
+	focus = {
+		id = CNN_cnn_politics_effort_1
+		icon = GFX_focus_eng_decolonization
+		x = 5
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 120
+			set_power_balance = {
+				id = CNN_test_bop
+				set_default = yes
+			}
+		}
+	}
+
+	#CNN_ISR_1
+	focus = {
+		id = CNN_cnn_isr_1
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CNN_cnn_politics_effort_1  }
+		mutually_exclusive = { focus = CNN_cnn_pal_1  } mutually_exclusive = { focus = CNN_cnn_politics_effort_2  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CNN_arab_rebellion_1
+				add_idea = CNN_arab_rebellion_2
+			}
+			create_country_leader = {
+				name = "AFG_mohammed_zahir_shah"
+				desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+				picture = GFX_AFG_mohammed_zahir_shah
+				expire = "1965.1.1"
+				ideology = zionism
+				traits = {
+					socialite_connections
+				}
+			}
+		}
+	}
+
+	#CNN_PAL_1
+	focus = {
+		id = CNN_cnn_pal_1
+		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
+		x = 8
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CNN_cnn_politics_effort_1  }
+		mutually_exclusive = { focus = CNN_cnn_isr_1  } mutually_exclusive = { focus = CNN_cnn_politics_effort_2  }
+	}
+
+	#CNN_politics_effort_2
+	focus = {
+		id = CNN_cnn_politics_effort_2
+		icon = GFX_goal_generic_neutrality_focus
+		x = 5
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CNN_cnn_politics_effort_1  }
+		mutually_exclusive = { focus = CNN_cnn_isr_1  } mutually_exclusive = { focus = CNN_cnn_pal_1  }
+	}
+
+	#CNN_ISR_2
+	focus = {
+		id = CNN_cnn_isr_2
+		icon = GFX_goal_generic_fortify_city
+		x = 3
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CNN_cnn_isr_1  }
+	}
+
+	#CNN_ISR_3
+	focus = {
+		id = CNN_cnn_isr_3
+		icon = GFX_focus_generic_industry_3
+		x = 1
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CNN_cnn_isr_1  }
+	}
+
+}

@@ -1,0 +1,1 @@
+CNN	= "countries/Canaan.txt"

@@ -1,0 +1,27 @@
+
+state={
+	id=974
+	name="STATE_974" #Palestine
+	manpower = 253270
+
+	state_category = rural
+
+	history={
+		owner = CNN
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+		}
+		victory_points = {
+			13366 50
+		}
+
+		add_core_of = CNN
+	}
+
+	provinces={
+		13366
+	}
+
+	local_supplies=0.0
+}

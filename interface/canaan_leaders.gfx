@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_Arthur_Wauchope"
+		texturefile = "gfx/leaders/CNN/Portrait_Canaan_Arthur_Wauchope.dds"
+	}
+}

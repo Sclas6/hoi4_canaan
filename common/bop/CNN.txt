@@ -1,0 +1,85 @@
+CNN_test_bop = {
+	initial_value = -0.25
+	#left_side = SWI_centralization_bop_council
+	left_side = CNN_bop_ARAB
+	#right_side = SWI_centralization_bop_canton
+	right_side = CNN_bop_JEWS
+	decision_category = SWI_debug_decisions_category
+
+	range = { #Balanced Range, neither Councils nor Cantons
+		id = CNN_bop_balanced
+		min = -0.25
+		max = 0.25
+		modifier = {
+			political_advisor_cost_factor = -0.5
+			surrender_limit	= 0.1
+		}
+	}
+
+	side = {
+		id = CNN_bop_JEWS
+		icon = GFX_bop_SWI_centralization_canton_side
+		range = {
+			id = CNN_bop_fully_JEWS
+			min = 0.75
+			max = 1
+			modifier = {
+				war_support_factor = -0.3
+				political_advisor_cost_factor = -1
+				surrender_limit	= 0.75
+			}
+			on_activate = {
+				#promote_character = SWI_federal_assembly
+				log = "Fully cantons activated"
+			}
+		}
+
+		range = {
+			id = CNN_bop_very_JEWS
+			min = 0.25
+			max = 0.75
+			modifier = {
+				war_support_factor = -0.15
+				political_advisor_cost_factor = -0.75
+				surrender_limit	= 0.4
+			}
+			on_activate = {
+				#promote_character = SWI_federal_assembly
+				log = "Very cantons activated"
+			}
+		}
+	}
+
+	side = {
+		id = CNN_bop_ARAB
+		icon = GFX_bop_SWI_centralization_council_side
+		range = {
+			id = CNN_bop_fully_ARAB
+			min = -1
+			max = -0.75
+			modifier = {
+				war_support_factor = 0.15
+				surrender_limit	= -0.2
+			}
+			on_activate = {
+				#promote_character = SWI_federal_council
+				log = "Fully Council activated"
+			}
+		}
+
+		range = {
+			id = CNN_bop_very_ARAB
+			min = -0.75
+			max = -0.25
+			modifier = {
+				war_support_factor = 0.1
+				political_advisor_cost_factor = -0.25
+				surrender_limit	= -0.1
+			}
+			on_activate = {
+				#promote_character = SWI_federal_council
+				log = "Very Council activated"
+			}
+		}
+	}
+}

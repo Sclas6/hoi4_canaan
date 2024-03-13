@@ -1,0 +1,190 @@
+CNN_test_decisions = {
+	CNN_test_decision_1 = {
+		icon = GFX_decision_SWI_dismiss_council
+		priority = 60
+		allowed = { original_tag = CNN }
+		visible = {
+			#has_completed_focus = SWI_swiss_guiding_principles
+			#has_variable = SWI_confederation_president
+			#NOT = { has_country_flag = SWI_elected_centralized_president }
+			original_tag = CNN
+		}
+		available = {
+			original_tag = CNN
+		}
+		cost = 0
+		complete_effect = {
+			#custom_effect_tooltip = SWI_oust_the_conferedation_president
+			#hidden_effect = {
+			#	set_variable = { SWI_ousted_president = SWI_confederation_president }
+			#	clear_variable = SWI_confederation_president 
+			#	set_country_flag = SWI_vacant_confederation_president_position
+			#	SWI_outgoing_president_cleanup = yes
+			#	SWI_update_councilors = yes
+			#}
+			set_power_balance = {
+				id = CNN_test_bop
+				set_default = yes
+			}
+			add_power_balance_modifier = {
+				id = CNN_test_bop
+				modifier = jewish_immigrants_increasing
+			}
+			#add_ideas = { SWI_no_confederation_president_idea }
+		}
+		ai_will_do = { #shouldn't do it in historical
+			base = 1 
+			modifier  = {
+				factor = 0 
+				SWI_is_historical_ai = yes 
+			}
+		}
+	}
+	CNN_test_decision_2 = {
+		icon = GFX_decision_SWI_dismiss_council
+		priority = 60
+		allowed = { original_tag = CNN }
+		visible = {
+			original_tag = CNN
+		}
+		available = {
+			original_tag = CNN
+		}
+		cost = 0
+		complete_effect = {
+			#custom_effect_tooltip = SWI_oust_the_conferedation_president
+			#hidden_effect = {
+			#}
+			# Israel States
+			937 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			938 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			940 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			# Palestine States
+			454 = {
+				add_core_of = PAL
+				transfer_state_to = PAL
+			}
+			935 = {
+				add_core_of = PAL
+				transfer_state_to = PAL
+			}
+			936 = {
+				add_core_of = PAL
+				transfer_state_to = PAL
+			}
+			# Jerusalem
+			939 = {
+				add_core_of = ISR
+				add_core_of = PAL
+			}
+			ISR = { change_tag_from = CNN }
+		}
+
+		ai_will_do = { #shouldn't do it in historical
+			base = 1 
+			modifier  = {
+				factor = 0 
+				SWI_is_historical_ai = yes 
+			}
+		}
+	}
+	CNN_test_decision_3 = {
+		icon = GFX_decision_SWI_dismiss_council
+		priority = 60
+		allowed = { original_tag = CNN }
+		visible = {
+			original_tag = CNN
+		}
+		available = {
+			original_tag = CNN
+		}
+		cost = 0
+		complete_effect = {
+			#custom_effect_tooltip = SWI_oust_the_conferedation_president
+			#hidden_effect = {
+			#}
+			# Israel States
+			344 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			799 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			677 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			553 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			554 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			941 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			455 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			675 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			854 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			857 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			855 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			656 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			453 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			446 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			907 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+			457 = {
+				add_core_of = ISR
+				transfer_state_to = ISR
+			}
+		}
+
+		ai_will_do = { #shouldn't do it in historical
+			base = 1 
+			modifier  = {
+				factor = 0 
+				SWI_is_historical_ai = yes 
+			}
+		}
+	}
+}
